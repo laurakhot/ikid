@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -20,6 +21,7 @@
                         <segue destination="9Zj-Yq-1IM" kind="relationship" relationship="viewControllers" id="1lu-7F-MMF"/>
                         <segue destination="j5d-T7-7MM" kind="relationship" relationship="viewControllers" id="DjX-zA-3p9"/>
                         <segue destination="Az5-wK-ZEB" kind="relationship" relationship="viewControllers" id="9Dx-1V-vyY"/>
+                        <segue destination="Oqn-QF-H2q" kind="relationship" relationship="viewControllers" id="gqV-xs-RPx"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="55p-vx-4AY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -177,6 +179,53 @@
             </objects>
             <point key="canvasLocation" x="5516" y="886"/>
         </scene>
+        <!--Knock Knock-->
+        <scene sceneID="9UM-V8-qCa">
+            <objects>
+                <viewController id="vTa-QQ-na1" customClass="KnockJokeController" customModule="ikid" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pNe-af-ajU">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KQ1-ff-LYz">
+                                <rect key="frame" x="293" y="650" width="60" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="IJT-S3-ina"/>
+                                    <constraint firstAttribute="height" constant="35" id="aQc-SX-Edx"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Next"/>
+                                <connections>
+                                    <action selector="nextPressWith_sender:" destination="vTa-QQ-na1" eventType="touchUpInside" id="FVa-Xp-kAY"/>
+                                    <action selector="nextPressWith_sender:" destination="CW7-yM-dxl" eventType="touchUpInside" id="UM4-Fv-o2O"/>
+                                    <action selector="nextPressWith_sender:" destination="L5v-Jy-NXi" eventType="touchUpInside" id="ndt-IU-ucE"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Knock knock!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cVe-Sd-ptr">
+                                <rect key="frame" x="145" y="416" width="103" height="20.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="alt-Ej-lPH"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="alt-Ej-lPH" firstAttribute="trailing" secondItem="KQ1-ff-LYz" secondAttribute="trailing" constant="40" id="M2n-AD-WvP"/>
+                            <constraint firstItem="cVe-Sd-ptr" firstAttribute="centerY" secondItem="pNe-af-ajU" secondAttribute="centerY" id="XCj-Od-bgB"/>
+                            <constraint firstItem="alt-Ej-lPH" firstAttribute="bottom" secondItem="KQ1-ff-LYz" secondAttribute="bottom" constant="50" id="fwK-eR-OB1"/>
+                            <constraint firstItem="cVe-Sd-ptr" firstAttribute="centerX" secondItem="pNe-af-ajU" secondAttribute="centerX" id="wtM-Dq-48W"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Knock Knock" id="im7-AW-qOf"/>
+                    <connections>
+                        <outlet property="jokeLabel" destination="cVe-Sd-ptr" id="IwT-47-aoE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HXt-d5-htk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6481.679389312977" y="890.84507042253529"/>
+        </scene>
         <!--Pun-->
         <scene sceneID="9cF-je-oS8">
             <objects>
@@ -211,10 +260,31 @@
             </objects>
             <point key="canvasLocation" x="5390" y="170"/>
         </scene>
+        <!--Knock-->
+        <scene sceneID="yKb-fv-GzQ">
+            <objects>
+                <navigationController id="Oqn-QF-H2q" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Knock" image="door.left.hand.closed" catalog="system" id="lmU-0v-Ffo"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="lSz-hX-vyR">
+                        <rect key="frame" x="0.0" y="118" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="vTa-QQ-na1" kind="relationship" relationship="rootViewController" id="xWY-WO-Hfh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wuq-iN-7Hp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6247" y="184"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="door.left.hand.closed" catalog="system" width="108" height="128"/>
         <image name="hand.thumbsdown.fill" catalog="system" width="128" height="121"/>
         <image name="hand.thumbsup.fill" catalog="system" width="128" height="121"/>
         <image name="smiley.fill" catalog="system" width="128" height="123"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

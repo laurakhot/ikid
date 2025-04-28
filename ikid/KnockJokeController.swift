@@ -1,5 +1,5 @@
 //
-//  GoodJokeController.swift
+//  KnockJokeController.swift
 //  ikid
 //
 //  Created by Laura Khotemlyansky on 4/27/25.
@@ -7,12 +7,17 @@
 
 import UIKit
 
-class GoodJokeController: UIViewController {
+class KnockJokeController: UIViewController {
     @IBOutlet weak var jokeLabel: UILabel!
    
-    var showingQuestion = true
-    let question = "I'm on a seafood diet"
-    let punchline = "I see food and I eat it"
+    var currJoke = 0
+    let joke = [
+        "Knock knock!",
+        "Who's there?",
+        "Deja",
+        "Deja who?",
+        "Knock knock..."
+    ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,18 +25,17 @@ class GoodJokeController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        showingQuestion = true
-        jokeLabel.text = question
+        currJoke = 0
+        jokeLabel.text = joke[0]
     }
     
     @IBAction func nextPress(_sender: UIButton) {
-        let toText = showingQuestion ? punchline : question
+        
+        self.currJoke = (self.currJoke + 1) % self.joke.count
         
         UIView.transition(with: jokeLabel, duration: 0.4, options: .transitionFlipFromRight, animations: {
-            self.jokeLabel.text = toText
-        }, completion: nil)
-        
-        showingQuestion = !showingQuestion
+                       self.jokeLabel.text = self.joke[self.currJoke]
+                   }, completion: nil)
     }
 
 
