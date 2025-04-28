@@ -22,6 +22,7 @@
                         <segue destination="j5d-T7-7MM" kind="relationship" relationship="viewControllers" id="DjX-zA-3p9"/>
                         <segue destination="Az5-wK-ZEB" kind="relationship" relationship="viewControllers" id="9Dx-1V-vyY"/>
                         <segue destination="Oqn-QF-H2q" kind="relationship" relationship="viewControllers" id="gqV-xs-RPx"/>
+                        <segue destination="RUO-n9-n7U" kind="relationship" relationship="viewControllers" id="xYT-ch-Egm"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="55p-vx-4AY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -68,7 +69,6 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="Next"/>
                                 <connections>
-                                    <action selector="nextPressWith_sender:" destination="CW7-yM-dxl" eventType="touchUpInside" id="a8J-TI-LFd"/>
                                     <action selector="nextPressWith_sender:" destination="g0G-6J-cwp" eventType="touchUpInside" id="yBA-7T-xxc"/>
                                 </connections>
                             </button>
@@ -158,7 +158,6 @@
                                 <buttonConfiguration key="configuration" style="gray" title="Next"/>
                                 <connections>
                                     <action selector="nextPressWith_sender:" destination="L5v-Jy-NXi" eventType="touchUpInside" id="jRt-ia-vee"/>
-                                    <action selector="nextPressWith_sender:" destination="CW7-yM-dxl" eventType="touchUpInside" id="r6U-oV-zq2"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -197,8 +196,6 @@
                                 <buttonConfiguration key="configuration" style="gray" title="Next"/>
                                 <connections>
                                     <action selector="nextPressWith_sender:" destination="vTa-QQ-na1" eventType="touchUpInside" id="FVa-Xp-kAY"/>
-                                    <action selector="nextPressWith_sender:" destination="CW7-yM-dxl" eventType="touchUpInside" id="UM4-Fv-o2O"/>
-                                    <action selector="nextPressWith_sender:" destination="L5v-Jy-NXi" eventType="touchUpInside" id="ndt-IU-ucE"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Knock knock!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cVe-Sd-ptr">
@@ -224,7 +221,54 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HXt-d5-htk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6481.679389312977" y="890.84507042253529"/>
+            <point key="canvasLocation" x="6366" y="891"/>
+        </scene>
+        <!--Image-->
+        <scene sceneID="jKw-DZ-JiW">
+            <objects>
+                <viewController id="Sdk-ls-QYd" customClass="ImageJokeController" customModule="ikid" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dC5-at-OfN" customClass="Image">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k9o-cb-PQH">
+                                <rect key="frame" x="293" y="650" width="60" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="0tc-Ti-SEH"/>
+                                    <constraint firstAttribute="height" constant="35" id="bFw-QF-Vax"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Next"/>
+                                <connections>
+                                    <action selector="nextPressed:" destination="Sdk-ls-QYd" eventType="touchUpInside" id="MD1-BP-628"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="drake_top" translatesAutoresizingMaskIntoConstraints="NO" id="lyH-PQ-TwC">
+                                <rect key="frame" x="32.666666666666657" y="355" width="328" height="142"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="142" id="Kph-lv-w8P"/>
+                                    <constraint firstAttribute="width" constant="328" id="Tb9-Vi-vcn"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Oyu-yz-ehp"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Oyu-yz-ehp" firstAttribute="bottom" secondItem="k9o-cb-PQH" secondAttribute="bottom" constant="50" id="4Kg-ah-eYl"/>
+                            <constraint firstItem="lyH-PQ-TwC" firstAttribute="centerX" secondItem="dC5-at-OfN" secondAttribute="centerX" id="Ua7-YW-7XW"/>
+                            <constraint firstItem="lyH-PQ-TwC" firstAttribute="centerY" secondItem="dC5-at-OfN" secondAttribute="centerY" id="VXg-QX-z8r"/>
+                            <constraint firstItem="Oyu-yz-ehp" firstAttribute="bottom" secondItem="k9o-cb-PQH" secondAttribute="bottom" constant="50" id="aGo-ho-cM7"/>
+                            <constraint firstItem="Oyu-yz-ehp" firstAttribute="trailing" secondItem="k9o-cb-PQH" secondAttribute="trailing" constant="40" id="nxz-vl-cIY"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Image" id="E5i-S1-LBy"/>
+                    <connections>
+                        <outlet property="imageView" destination="lyH-PQ-TwC" id="5J0-Gv-YRD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DbW-hb-FVx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7145.801526717557" y="885.91549295774655"/>
         </scene>
         <!--Pun-->
         <scene sceneID="9cF-je-oS8">
@@ -275,11 +319,30 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wuq-iN-7Hp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6247" y="184"/>
+            <point key="canvasLocation" x="6199" y="170"/>
+        </scene>
+        <!--Image-->
+        <scene sceneID="iaS-Te-dXK">
+            <objects>
+                <navigationController id="RUO-n9-n7U" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Image" image="camera.fill" catalog="system" id="Eno-ia-PuW"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="mpp-ZT-fBQ">
+                        <rect key="frame" x="0.0" y="118" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Sdk-ls-QYd" kind="relationship" relationship="rootViewController" id="uAI-tt-QTk"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hS3-hh-GeL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7033" y="202"/>
         </scene>
     </scenes>
     <resources>
+        <image name="camera.fill" catalog="system" width="128" height="93"/>
         <image name="door.left.hand.closed" catalog="system" width="108" height="128"/>
+        <image name="drake_top" width="936" height="468"/>
         <image name="hand.thumbsdown.fill" catalog="system" width="128" height="121"/>
         <image name="hand.thumbsup.fill" catalog="system" width="128" height="121"/>
         <image name="smiley.fill" catalog="system" width="128" height="123"/>
