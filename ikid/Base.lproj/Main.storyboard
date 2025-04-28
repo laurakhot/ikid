@@ -1,24 +1,199 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="JL8-zf-MfZ">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Tab Bar Controller-->
+        <scene sceneID="Lck-jA-EyT">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tabBarController id="JL8-zf-MfZ" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="7MG-Bf-fxd">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="9Zj-Yq-1IM" kind="relationship" relationship="viewControllers" id="1lu-7F-MMF"/>
+                        <segue destination="j5d-T7-7MM" kind="relationship" relationship="viewControllers" id="DjX-zA-3p9"/>
+                        <segue destination="Az5-wK-ZEB" kind="relationship" relationship="viewControllers" id="9Dx-1V-vyY"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="55p-vx-4AY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="4468" y="-507"/>
+        </scene>
+        <!--Good-->
+        <scene sceneID="og6-Wg-rGR">
+            <objects>
+                <navigationController id="9Zj-Yq-1IM" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Good" image="hand.thumbsup.fill" catalog="system" id="Aoh-5p-IGh"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9QJ-Ul-P2Y">
+                        <rect key="frame" x="0.0" y="118" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="g0G-6J-cwp" kind="relationship" relationship="rootViewController" id="BHc-Ic-QIJ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZHN-sA-cv5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3859" y="170"/>
+        </scene>
+        <!--Good-->
+        <scene sceneID="ggr-xS-j2T">
+            <objects>
+                <viewController id="g0G-6J-cwp" customClass="GoodJokeController" customModule="ikid" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gXk-6v-GBY">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="I'm on a seafood diet" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9jA-Uh-9Wo" customClass="Good">
+                                <rect key="frame" x="61" y="337" width="270" height="179"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KWo-xu-ZAs">
+                                <rect key="frame" x="317" y="700" width="60" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Next"/>
+                                <connections>
+                                    <action selector="nextPressWith_sender:" destination="CW7-yM-dxl" eventType="touchUpInside" id="a8J-TI-LFd"/>
+                                    <action selector="nextPressWith_sender:" destination="g0G-6J-cwp" eventType="touchUpInside" id="yBA-7T-xxc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="83E-xR-zYk"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Good" id="Nkl-b6-BxW"/>
+                    <connections>
+                        <outlet property="jokeLabel" destination="9jA-Uh-9Wo" id="41N-7E-76s"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dBh-Rs-YTk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3853" y="891"/>
+        </scene>
+        <!--Pun-->
+        <scene sceneID="Tgl-uq-f3U">
+            <objects>
+                <viewController id="CW7-yM-dxl" customClass="PunJokeController" customModule="ikid" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Bzc-QE-tY6">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="I used to play piano by ear" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eGk-DZ-4V2">
+                                <rect key="frame" x="61" y="337" width="270" height="179"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nOJ-pi-lQs">
+                                <rect key="frame" x="317" y="700" width="60" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Next"/>
+                                <connections>
+                                    <action selector="nextPressWith_sender:" destination="CW7-yM-dxl" eventType="touchUpInside" id="iD8-WS-Zv4"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="dxA-3Y-olv"/>
+                        <constraints>
+                            <constraint firstItem="nOJ-pi-lQs" firstAttribute="trailing" secondItem="Bzc-QE-tY6" secondAttribute="trailingMargin" id="bo4-yn-i7k"/>
+                            <constraint firstItem="nOJ-pi-lQs" firstAttribute="bottom" secondItem="dxA-3Y-olv" secondAttribute="bottom" id="fOM-9L-Ado"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Pun" id="Luf-TF-Qz5"/>
+                    <connections>
+                        <outlet property="jokeLabel" destination="eGk-DZ-4V2" id="EUn-r5-5DL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nA8-bz-y65" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4641.9847328244277" y="888.73239436619724"/>
+        </scene>
+        <!--Dad-->
+        <scene sceneID="XMh-nm-9yj">
+            <objects>
+                <viewController id="L5v-Jy-NXi" customClass="DadJokeController" customModule="ikid" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uLr-Ao-zWa">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="I used to be addicted to soap" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QIf-cp-U2D">
+                                <rect key="frame" x="61" y="337" width="270" height="179"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zNo-gb-U46">
+                                <rect key="frame" x="317" y="700" width="60" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Next"/>
+                                <connections>
+                                    <action selector="nextPressWith_sender:" destination="L5v-Jy-NXi" eventType="touchUpInside" id="jRt-ia-vee"/>
+                                    <action selector="nextPressWith_sender:" destination="CW7-yM-dxl" eventType="touchUpInside" id="r6U-oV-zq2"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="mVd-C5-DQu"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Dad" id="v5L-tm-ikw"/>
+                    <connections>
+                        <outlet property="jokeLabel" destination="QIf-cp-U2D" id="i5o-ie-tI5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vVd-S3-3Mi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5516" y="886"/>
+        </scene>
+        <!--Pun-->
+        <scene sceneID="9cF-je-oS8">
+            <objects>
+                <navigationController id="j5d-T7-7MM" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Pun" image="smiley.fill" catalog="system" id="xVa-7T-Ayb"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="cle-wF-wYJ">
+                        <rect key="frame" x="0.0" y="118" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="CW7-yM-dxl" kind="relationship" relationship="rootViewController" id="xb8-dU-ZZL"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KCV-in-0Qz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4634" y="170"/>
+        </scene>
+        <!--Dad-->
+        <scene sceneID="WZu-Si-Tag">
+            <objects>
+                <navigationController id="Az5-wK-ZEB" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Dad" image="hand.thumbsdown.fill" catalog="system" id="19t-8f-zZy"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="sIv-32-cTE">
+                        <rect key="frame" x="0.0" y="118" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="L5v-Jy-NXi" kind="relationship" relationship="rootViewController" id="8RD-81-Taq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jMp-HI-iar" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5390" y="170"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="hand.thumbsdown.fill" catalog="system" width="128" height="121"/>
+        <image name="hand.thumbsup.fill" catalog="system" width="128" height="121"/>
+        <image name="smiley.fill" catalog="system" width="128" height="123"/>
+    </resources>
 </document>
