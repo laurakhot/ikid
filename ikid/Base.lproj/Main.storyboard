@@ -51,16 +51,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="I'm on a seafood diet" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9jA-Uh-9Wo" customClass="Good">
-                                <rect key="frame" x="61" y="337" width="270" height="179"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I'm on a seafood diet" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9jA-Uh-9Wo" customClass="Good">
+                                <rect key="frame" x="117.33333333333333" y="416" width="158.66666666666669" height="20.333333333333314"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KWo-xu-ZAs">
-                                <rect key="frame" x="317" y="700" width="60" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KWo-xu-ZAs">
+                                <rect key="frame" x="293" y="650" width="60" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="98e-W9-EZn"/>
+                                    <constraint firstAttribute="width" constant="60" id="dX8-S6-4cP"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="Next"/>
                                 <connections>
@@ -70,6 +72,12 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="83E-xR-zYk"/>
+                        <constraints>
+                            <constraint firstItem="9jA-Uh-9Wo" firstAttribute="centerY" secondItem="gXk-6v-GBY" secondAttribute="centerY" id="oJs-Bp-7Ba"/>
+                            <constraint firstItem="83E-xR-zYk" firstAttribute="trailing" secondItem="KWo-xu-ZAs" secondAttribute="trailing" constant="40" id="tuh-2J-iZJ"/>
+                            <constraint firstItem="83E-xR-zYk" firstAttribute="bottom" secondItem="KWo-xu-ZAs" secondAttribute="bottom" constant="50" id="vNn-Mn-QtX"/>
+                            <constraint firstItem="9jA-Uh-9Wo" firstAttribute="centerX" secondItem="gXk-6v-GBY" secondAttribute="centerX" id="y2c-js-edp"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Good" id="Nkl-b6-BxW"/>
                     <connections>
@@ -88,15 +96,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="I used to play piano by ear" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eGk-DZ-4V2">
-                                <rect key="frame" x="61" y="337" width="270" height="179"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I used to play piano by ear" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eGk-DZ-4V2">
+                                <rect key="frame" x="97.333333333333329" y="416" width="198.66666666666669" height="20.333333333333314"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nOJ-pi-lQs">
-                                <rect key="frame" x="317" y="700" width="60" height="35"/>
+                                <rect key="frame" x="293" y="650" width="60" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="ATq-TO-gUe"/>
+                                    <constraint firstAttribute="width" constant="60" id="XR1-Ph-OAj"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="Next"/>
                                 <connections>
@@ -106,8 +117,10 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="dxA-3Y-olv"/>
                         <constraints>
-                            <constraint firstItem="nOJ-pi-lQs" firstAttribute="trailing" secondItem="Bzc-QE-tY6" secondAttribute="trailingMargin" id="bo4-yn-i7k"/>
-                            <constraint firstItem="nOJ-pi-lQs" firstAttribute="bottom" secondItem="dxA-3Y-olv" secondAttribute="bottom" id="fOM-9L-Ado"/>
+                            <constraint firstItem="eGk-DZ-4V2" firstAttribute="centerY" secondItem="Bzc-QE-tY6" secondAttribute="centerY" id="JGs-Bg-zPO"/>
+                            <constraint firstItem="eGk-DZ-4V2" firstAttribute="centerX" secondItem="Bzc-QE-tY6" secondAttribute="centerX" id="OgW-MT-nRL"/>
+                            <constraint firstItem="dxA-3Y-olv" firstAttribute="bottom" secondItem="nOJ-pi-lQs" secondAttribute="bottom" constant="50" id="PFD-Ng-ncH"/>
+                            <constraint firstItem="dxA-3Y-olv" firstAttribute="trailing" secondItem="nOJ-pi-lQs" secondAttribute="trailing" constant="40" id="U8y-Vz-HG4"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Pun" id="Luf-TF-Qz5"/>
@@ -127,16 +140,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="I used to be addicted to soap" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QIf-cp-U2D">
-                                <rect key="frame" x="61" y="337" width="270" height="179"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I used to be addicted to soap" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QIf-cp-U2D">
+                                <rect key="frame" x="86.000000000000014" y="416" width="221.33333333333337" height="20.333333333333314"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zNo-gb-U46">
-                                <rect key="frame" x="317" y="700" width="60" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zNo-gb-U46">
+                                <rect key="frame" x="293" y="650" width="60" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="jEq-z4-f9l"/>
+                                    <constraint firstAttribute="height" constant="35" id="wp7-27-HPq"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="Next"/>
                                 <connections>
@@ -146,6 +161,12 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="mVd-C5-DQu"/>
+                        <constraints>
+                            <constraint firstItem="mVd-C5-DQu" firstAttribute="trailing" secondItem="zNo-gb-U46" secondAttribute="trailing" constant="40" id="23P-Ng-J9K"/>
+                            <constraint firstItem="mVd-C5-DQu" firstAttribute="bottom" secondItem="zNo-gb-U46" secondAttribute="bottom" constant="50" id="F3g-FP-x6T"/>
+                            <constraint firstItem="QIf-cp-U2D" firstAttribute="centerY" secondItem="uLr-Ao-zWa" secondAttribute="centerY" id="f8t-Is-kJc"/>
+                            <constraint firstItem="QIf-cp-U2D" firstAttribute="centerX" secondItem="uLr-Ao-zWa" secondAttribute="centerX" id="mnH-Fq-efn"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Dad" id="v5L-tm-ikw"/>
                     <connections>
